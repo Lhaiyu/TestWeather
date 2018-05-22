@@ -1,7 +1,9 @@
 package com.example.administrator.testweather.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
+import com.bumptech.glide.util.LogTime;
 import com.example.administrator.testweather.db.City;
 import com.example.administrator.testweather.db.County;
 import com.example.administrator.testweather.db.Province;
@@ -65,7 +67,7 @@ public class Utility {
     /**
      * 解析和处理服务器返回的县级数据
      */
-    public static boolean hanleCountyResponse(String response,int cityId){
+    public static boolean handleCountyResponse(String response,int cityId){
         if (!TextUtils.isEmpty(response)){
             try {
                 JSONArray allCounties = new JSONArray(response);
@@ -77,6 +79,7 @@ public class Utility {
                     county.setCityId(cityId);
                     county.save();
                 }
+                return true;
             } catch (JSONException e) {
                 e.printStackTrace();
             }

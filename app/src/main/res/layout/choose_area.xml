@@ -24,7 +24,7 @@
             android:layout_marginLeft="10dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:background="@mipmap/ic_launcher"/>
+            android:background="@mipmap/back"/>
     </RelativeLayout>
 
     <ListView
